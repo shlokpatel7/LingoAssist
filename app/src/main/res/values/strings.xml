@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LingoAssist</string>
+    <string name="web_client_id">9505245202-a4lm5sse7j4tmsnue78mac0o1hvtmnml.apps.googleusercontent.com</string>
+    <string-array name="lang_array">
+        <item>French</item>
+        <item>German</item>
+        <item>Spanish</item>
+        <item>Urdu</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

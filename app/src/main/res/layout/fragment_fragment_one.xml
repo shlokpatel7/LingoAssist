@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".FragmentOne">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/speak"
+                android:layout_width="20dp"
+                android:layout_height="60dp"
+                android:src="@drawable/speaker" />
+            <TextView
+                android:textColor="#000"
+                android:layout_marginHorizontal="20dp"
+                android:id="@+id/translated_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="Translated text" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/main_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="This is an apple"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/tree_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/New"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:textColor="#fff"
+        android:text="Welcome to"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="12dp"
+        android:fontFamily="@font/caveat_bold"
+        android:text="LingoAssist"
+        android:textColor="#fff"
+        android:textSize="45sp" />
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="200dp"
+        android:layout_marginVertical="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:id="@+id/sign_in_btn"/>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="BallPulseIndicator"
+        />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/translate_activity"
+        android:icon="@drawable/translate"
+        android:title="Learn" />
+
+    <item
+        android:id="@+id/lang_activity"
+        android:icon="@drawable/worlwide"
+        android:title="Languages" />
+
+    <item
+        android:id="@+id/my_account"
+        android:icon="@drawable/user"
+        android:title="My Account" />
+
+</menu>

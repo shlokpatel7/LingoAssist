@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "9505245202",
+    "firebase_url": "https://endless-context-216420.firebaseio.com",
+    "project_id": "endless-context-216420",
+    "storage_bucket": "endless-context-216420.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9505245202:android:fc6437a51dfda307",
+        "android_client_info": {
+          "package_name": "com.example.shlokpatel.lingoassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9505245202-em85jub7vj6gn2nsni2itj9oaqqifsrm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shlokpatel.lingoassist",
+            "certificate_hash": "94485cf8996e6f6ed81dcff6e7f99d3888ee3c14"
+          }
+        },
+        {
+          "client_id": "9505245202-jrbguup3soinsqrjrrqjdvi5ojat2u34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlBLvo-WPf7vYBkIg_h0hZjBDWCEKdYMY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9505245202-jrbguup3soinsqrjrrqjdvi5ojat2u34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
