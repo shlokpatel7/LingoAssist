@@ -4,32 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#265cef"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/learning_view"
-        android:clickable="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="12dp">
-        <LinearLayout
-            android:background="@drawable/btnback2"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="100dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Start Learning"
-                android:textStyle="bold"
-                android:padding="12dp"
-                android:textColor="#000"
-                android:textSize="30sp" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:id="@+id/performance_view"
+        android:id="@+id/level_one"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,15 +21,68 @@
                 android:scaleType="fitEnd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/graphback"/>
+                android:src="@drawable/sprout"/>
             <TextView
                 android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Performance"
+                android:text="Level 1"
                 android:textStyle="bold"
                 android:textColor="#000"
-                android:textSize="22sp" />
+                android:layout_marginLeft="12dp"
+                android:textSize="30sp" />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/level_two"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:scaleType="fitEnd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sprout1"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginLeft="12dp"
+                android:textSize="30sp" />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/level_three"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:scaleType="fitEnd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sprout2"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level 3"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginLeft="12dp"
+                android:textSize="30sp" />
         </FrameLayout>
     </android.support.v7.widget.CardView>
 

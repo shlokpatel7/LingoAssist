@@ -1,6 +1,8 @@
 package com.example.shlokpatel.lingoassist;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +17,10 @@ public class LanguageAdapter extends BaseAdapter {
     Activity activity;
     List<LanguageModel> list;
 
-    public LanguageAdapter(Activity activity, List<LanguageModel> users) {
+    public LanguageAdapter(Activity activity, List<LanguageModel> list) {
         this.activity = activity;
-        this.list = users;
+        this.list = list;
     }
-
 
     @Override
     public int getCount() {
@@ -57,6 +58,13 @@ public class LanguageAdapter extends BaseAdapter {
         LanguageModel model = list.get(i);
 
         holder.tvUserName.setText(model.getLangName());
+
+        SharedPreferences pref = activity.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String localeCode = pref.getString("LOCALE_CODE", null);
+
+        if(localeCode!=null && localeCode.equals(model.getLocaleCode())){
+            model.setSelected(true);
+        }
 
         if (model.isSelected())
             holder.ivCheckBox.setBackgroundResource(R.drawable.checked);

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#265cef"
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:padding="12dp"
+            android:id="@+id/image_bot"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_marginTop="20sp"
+            android:layout_weight="3"
+            android:textColor="#c4c4c4"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:id="@+id/email_bot"
+            android:layout_height="wrap_content"
+            android:text="Shlok Patel"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/layout_one"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="85dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="82dp"
+        android:background="#000" />
+
+    <LinearLayout
+        android:id="@+id/chat_send_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:layout_weight="3"
+            android:background="@drawable/round"
+            android:backgroundTint="#dad8d8"
+            android:hint="Enter text"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:textColor="#000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SEND"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

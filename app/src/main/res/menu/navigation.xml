@@ -7,11 +7,6 @@
         android:title="Learn" />
 
     <item
-        android:id="@+id/lang_activity"
-        android:icon="@drawable/worlwide"
-        android:title="Languages" />
-
-    <item
         android:id="@+id/my_account"
         android:icon="@drawable/user"
         android:title="My Account" />

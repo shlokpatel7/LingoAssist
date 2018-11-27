@@ -1,47 +1,40 @@
 package com.example.shlokpatel.lingoassist;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LanguageFragment extends Fragment {
+public class LanguageFragment extends AppCompatActivity {
+    int preSelectedIndex = -1;
 
-    ListView recyclerView;
-    private String[] arr = {"One", "Two", "Three", "Four", "Five", "Six"};
-    int preSelectedIndex=-1;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_language, container, false);
-        ListView listView = view.findViewById(R.id.list_view);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_language);
+        getSupportActionBar().setTitle("Select a language to learn");
+        final SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+
+        ListView listView = findViewById(R.id.list_view);
         final List<LanguageModel> langs = new ArrayList<>();
-        langs.add(new LanguageModel(false, "Spanish"));
-        langs.add(new LanguageModel(false, "Hindi"));
-        langs.add(new LanguageModel(false, "German"));
-        langs.add(new LanguageModel(false, "Urdu"));
-        langs.add(new LanguageModel(false, "Mandarin"));
-        langs.add(new LanguageModel(false, "Arabic"));
-        langs.add(new LanguageModel(false, "Russian"));
-        langs.add(new LanguageModel(false, "Bengali"));
-        langs.add(new LanguageModel(false, "Gujarati"));
-        langs.add(new LanguageModel(false, "Latin"));
+        langs.add(new LanguageModel(false, "Spanish", "es"));
+        langs.add(new LanguageModel(false, "German", "de"));
+        langs.add(new LanguageModel(false, "French", "fr"));
+        langs.add(new LanguageModel(false, "Russian", "ru"));
 
-        final LanguageAdapter adapter = new LanguageAdapter(getActivity(), langs);
+        final LanguageAdapter adapter = new LanguageAdapter(this,langs);
         listView.setAdapter(adapter);
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -51,9 +44,19 @@ public class LanguageFragment extends Fragment {
 
                 model.setSelected(true);
 
+
+                // We need an editor object to make changes
+                SharedPreferences.Editor edit = pref.edit();
+
+                // Store data. you may also use putFloat(), putInt(), putLong() as requirement
+                edit.putString("LOCALE_CODE", model.getLocaleCode());
+
+                // Commit the changes
+                edit.commit();
+
                 langs.set(i, model);
 
-                if (preSelectedIndex > -1){
+                if (preSelectedIndex > -1) {
 
                     LanguageModel preRecord = langs.get(preSelectedIndex);
                     preRecord.setSelected(false);
@@ -67,7 +70,6 @@ public class LanguageFragment extends Fragment {
                 adapter.updateRecords(langs);
             }
         });
-        return view;
     }
 
 }

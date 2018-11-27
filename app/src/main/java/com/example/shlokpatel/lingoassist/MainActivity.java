@@ -1,19 +1,16 @@
 package com.example.shlokpatel.lingoassist;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -58,14 +55,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.translate_activity:
                 getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.main_frame,new LearnFragment()).commit();
                 return true;
-            case R.id.lang_activity:
-                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.main_frame,new LanguageFragment()).commit();
-                return true;
             case R.id.my_account:
                 getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.main_frame,new AccountFragment()).commit();
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
 
